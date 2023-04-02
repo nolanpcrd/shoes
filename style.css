@@ -181,6 +181,7 @@ body {
     background-color: #fff;
     border-radius: 30px;
     text-decoration: none;
+    transition-duration: 0.3s;
 }
 
 .buy:hover {
@@ -350,8 +351,24 @@ body {
     width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-    header {
-        padding: 40px
+@media screen and (max-width: 1920px) and (min-width: 1920px) {
+    .title {
+        font-size: 70px;
+    }
+
+    .price {
+        font-size: 50px;
+    }
+
+    .description {
+        font-size: 45px;
+    }
+
+    .buy {
+        font-size: 50px;
+    }
+
+    #purple, #navy, #blue {
+        height: 700px;
     }
 }
