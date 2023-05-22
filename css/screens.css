@@ -1,0 +1,21 @@
+@media screen and (max-width: 1920px) and (min-width: 1920px) {
+    .title {
+        font-size: 70px;
+    }
+
+    .price {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 42px;
+    }
+
+    .buy {
+        font-size: 50px;
+    }
+
+    #purple, #navy, #blue {
+        height: 700px;
+    }
+}

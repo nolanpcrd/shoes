@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOES</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/others.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/screens.css">
+    <script src="https://kit.fontawesome.com/f7b59f6a8d.js" crossorigin="anonymous"></script>
+    <script src="js/addtocart.js"></script>
+    <script>
+        function init() {
+            updateCartQuantity(localStorage.getItem('nb_products') || 0)
+        }
+    </script>
+</head>
+<body onload="init()">
+    <?php $id = $_SESSION['id']; ?>
+    <script>
+        var pageUrl = [];
+        var id = "<?php echo $id; ?>";
+        pageUrl[1] = "shoes.html?id=" + id;
+        pageUrl[2] = "shoes.html?id=" + id;
+        pageUrl[3] = "shoes.html?id=" + id;
+        pageUrl[4] = "shoes.html?id=" + id;
+        pageUrl[5] = "shoes.html?id=" + id;
+        pageUrl[6] = "shoes.html?id=" + id;
+        pageUrl[7] = "shoes.html?id=" + id;
+        pageUrl[8] = "shoes.html?id=" + id;
+    </script>
+    <div id="header">
+        <div id="left">
+                <a href="#">MEN</a>
+                <a href="#">WOMEN</a>
+                <a href="#">CONTACT US</a>
+        </div>
+        <div id="center">
+                <a class="name" href="/index.html">SHOES</a>
+        </div>
+        <div id="right">
+                <a class="search" type="submit"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+                <a class="cart" type="submit"><i class="fa-solid fa-shopping-cart fa-lg"></i><span id="cart-quantity" class="cart-quantity"></span></a>
+        </div>
+    </div>
+
+    <div id="slider">
+        <div id="slides">
+            <div class="slide" id="slide1">
+                <img id="navy" src="img/shoes_navy.png" alt="shbn">
+                <div class="product-container">
+                    <h1 class="title" id="title-n">NAVY SHOES</h1>
+                    <h2 class="price" id="price-n">PRICE: $120</h2>
+                    <h3 class="description" id="description-n">Our most blue navy shoes</h3>
+                    <button class="buy" id="buy-n" onclick="addToCart()">SHOP NOW</button>
+                </div>
+            </div>
+            <div class="slide" id="slide2">
+                <img id="purple" src="img/shoes_purple.png" alt="shpr">
+                <div class="product-container">
+                    <h1 class="title" id="title-p">PURPLE SHOES</h1>
+                    <h2 class="price" id="price-p">PRICE: $140</h2>
+                    <h3 class="description" id="description-p">Our most purple shoes</h3>
+                    <button class="buy" id="buy-p" onclick="addToCart()">SHOP NOW</button>
+                </div>
+            </div>
+            <div class="slide" id="slide3">
+                <img id="blue" src="img/shoes_lb.png" alt="shlb">
+                <div class="product-container">
+                    <h1 class="title" id="title-b">LIGHT BLUE SHOES</h1>
+                    <h2 class="price" id="price-b">PRICE: $149.99</h2>
+                    <h3 class="description" id="description-b">Our most light blue shoes</h3>
+                    <button class="buy" id="buy-b" onclick="addToCart()">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="prev" onclick="prevSlide()"><</div>
+        <div class="next" onclick="nextSlide()">></div>
+    </div>
+
+    <div id="best">
+        <div class="titles">
+            <h1 class="titlestext">BEST SELLERS</h1>
+        </div>
+        <div class="cards">
+            <div class="card" id="yellow" data-tilt data-tilt-scale="1.02" data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="8">
+                <div class="card-image" id="imgyellow" onclick=window.location.href="shoes.html"></div>
+                <div class="card-text" onclick=window.location.href="shoes.html">
+                    <h2>YELLOW SHOES</h2>
+                    <p>The incredible yellow shoes.</p>
+                </div>
+                <div class="card-buy">
+                    <div class="card-price">
+                        <h3>$99.99</h3>
+                    </div>
+                    <div class="card-cart" id="cartyellow" onclick="addToCart()">
+                        <a class="cart" type="submit"><i class="fa-solid fa-shopping-cart fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="blu" data-tilt data-tilt-scale="1.02" data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="8">
+                <div class="card-image" id="imgblue" onclick=window.location.href="shoes.html"></div>
+                <div class="card-text" onclick=window.location.href="shoes.html">
+                    <h2>BLUE SHOES</h2>
+                    <p>The incredible blue shoes.</p>
+                </div>
+                <div class="card-buy">
+                    <div class="card-price">
+                        <h3>$129.99</h3>
+                    </div>
+                    <div class="card-cart" id="cartblue" onclick="addToCart()">
+                        <a class="cart" type="submit"><i class="fa-solid fa-shopping-cart fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="red" data-tilt data-tilt-scale="1.02" data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="8">
+                <div class="card-image" id="imgred" onclick=window.location.href="shoes.html"></div>
+                <div class="card-text" onclick=window.location.href="shoes.html">
+                    <h2>RED SHOES</h2>
+                    <p>The incredible red shoes.</p>
+                </div>
+                <div class="card-buy">
+                    <div class="card-price">
+                        <h3>$74.99</h3>
+                    </div>
+                    <div class="card-cart" id="cartred" onclick="addToCart()">
+                        <a class="cart" type="submit"><i class="fa-solid fa-shopping-cart fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <script src="js/vanilla-tilt.min.js"></script>
+        </div>
+    </div>
+
+    <div class="titles">
+        <h1 class="titlestext">ALL SHOES</h1>
+    </div>
+    <div class="others-container">
+        <script src="js/opti_others.js"></script>
+    </div>
+
+    <div id="footer">
+        SHOES&copy; 2023 <br> All rights reserved <br> Fake website
+    </div>
+    <script src="js/header.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>

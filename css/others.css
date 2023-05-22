@@ -1,0 +1,61 @@
+.others-container {
+    display: flex;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.others {
+    display: grid;
+    width: 300px;
+    grid-template-columns: 300px;
+    grid-template-rows: 300px 150px 70px;
+    grid-template-areas: "image" "text" "buy";
+    background: white;
+    text-align: center;
+    cursor: default;
+    margin:5px;
+    border: solid 1px grey;
+    transition-duration: 0.1s;
+}
+
+.others:hover {
+    z-index: 1000;
+    transform: scale(1.02);
+    transition-duration: 0.1s;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+.othersimg {
+    grid-area: image;
+    background-size: cover;
+}
+
+.otherstext{
+    grid-area: text;
+}
+
+.othersname h2 {
+    font-size: 1.5em;
+    margin-top: 10%;
+}
+
+.othersname p {
+    font-size: 1em;
+    margin-top: 10%;
+}
+
+.otherscart {
+    color: white;
+    grid-area: buy;
+    display: grid;
+    background: #000;
+    justify-content: center;
+    align-items: center;
+}
+
+.otherscart:hover {
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* reminder: width: 260px on a 300px bg */

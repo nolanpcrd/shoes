@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/shoes.css">
+    <script src="js/addtocart.js"></script>
+    <script src="https://kit.fontawesome.com/f7b59f6a8d.js" crossorigin="anonymous"></script>
+    <script>
+        function init() {
+            updateCartQuantity(localStorage.getItem('nb_products') || 0)
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div id="header">
+        <div id="left">
+            <a href="#">MEN</a>
+            <a href="#">WOMEN</a>
+            <a href="#">CONTACT US</a>
+        </div>
+        <div id="center">
+            <a class="name" href="index.html">SHOES</a>
+        </div>
+        <div id="right">
+            <a class="search" type="submit"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+            <a class="cart" type="submit"><i class="fa-solid fa-shopping-cart fa-lg"></i><span id="cart-quantity" class="cart-quantity"></span></a>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="divimg">
+            <img id="img" src="bigimg/other_shoes1.jpeg" alt="shoes">
+        </div>
+        <div id="infos">
+            <h2 id="name">SHOES</h2>
+            <h3 id="price">$120</h3>
+
+            <div id="description">
+                <p>Our shoes</p>
+            </div>
+
+            <div id="sizes">
+                <h4>Choose your size :</h4>
+                <button class="size" id="36">36</button>
+                <button class="size" id="37">37</button>
+                <button class="size" id="38">38</button>
+                <button class="size" id="39">39</button><br>
+                <button class="size" id="40">40</button>
+                <button class="size" id="41">41</button>
+                <button class="size" id="42">42</button>
+                <button class="size" id="43">43</button><br>
+                <button class="size" id="44">44</button>
+                <button class="size" id="45">45</button>
+                <button class="size" id="46">46</button>
+                <button class="size" id="47">47</button>
+            </div>
+            <div id="cart" onclick="addToCart()">
+                <a class="cartbutton" type="submit"><i class="fa-solid fa-shopping-cart fa-lg"></i></a>
+            </div>
+        </div>
+        <div id="articlescart">
+            <h3>YOUR CART (nb):</h3>
+        </div>
+    </div>
+
+    <div id="footer" style="position: fixed">
+        SHOES&copy; 2023 <br> All rights reserved <br> Fake website
+    </div>
+</body>
+</html>
